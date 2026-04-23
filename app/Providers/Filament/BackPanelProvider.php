@@ -27,7 +27,10 @@ class BackPanelProvider extends PanelProvider
             ->default()
             ->id('back')
             ->path('back')
+            ->spa()
             ->login()
+            ->registration()
+            ->passwordReset()
             ->colors([
                 'primary' => Color::Amber,
             ])
