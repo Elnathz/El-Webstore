@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\Image\Enums\Fit;
@@ -11,7 +12,7 @@ use Spatie\Tags\HasTags;
 
 class Product extends Model implements HasMedia
 {
-    use InteractsWithMedia, HasTags;
+    use HasFactory, InteractsWithMedia, HasTags;
 
     public function registerMediaConversions(?Media $media = null): void
     {
