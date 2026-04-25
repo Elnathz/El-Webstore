@@ -14,16 +14,12 @@
     <link rel="manifest" href="/site.webmanifest">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('head')
-
-    @livewireStyles
 </head>
 
 <body>
     <x-navigation />
     
     {{ $slot }}
-
-    @livewireScripts
 </body>
 <x-footer />
 
