@@ -6,7 +6,7 @@
                     <input type="text" placeholder="Search" wire:model="search"
                         class="py-2.5 sm:py-3 px-4 block w-full @error('search') border-red-500 focus:border-red-500 focus:ring-red-500 dark:border-red-500 dark:focus:ring-red-500 @else border-gray-200 focus:border-blue-500 focus:ring-blue-500 dark:border-neutral-700 dark:focus:ring-neutral-600 @enderror rounded-lg sm:text-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:text-neutral-400 dark:placeholder-neutral-500">
                     @error('search')
-                        <div class="text-sm text-red-500">
+                        <div class="mt-1 text-sm text-red-600 dark:text-red-500">
                             {{ $message }}
                         </div>
                     @enderror
@@ -15,7 +15,7 @@
                     Collections
                 </span>
                 @error('selectCollections.*')
-                    <div class="text-sm text-red-500">
+                    <div class="mt-1 text-sm text-red-600 dark:text-red-500">
                         {{ $message }}
                     </div>
                 @enderror
@@ -37,9 +37,13 @@
                     @endforeach
                 </div>
                 <div class="grid grid-cols-2 mt-10">
-                    <button type="button" wire:click="applyFilters"
+                    <button type="button" wire:click="applyFilters" wire:loading.attr="disabled"
                         class="inline-flex items-center justify-center px-4 py-3 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg cursor-pointer gap-x-2 hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
                         Apply Filter
+                        <div wire:loading class="animate-spin inline-block size-4 border-2 border-white border-t-transparent rounded-full"
+                            role="status" aria-label="loading">
+                            <span class="sr-only">Loading...</span>
+                        </div>
                     </button>
                     <button type="button" wire:click="resetFilters"
                         class="inline-flex items-center justify-center text-sm font-semibold text-blue-600 rounded-lg cursor-pointer gap-x-2 hover:text-blue-800 focus:outline-hidden focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:text-blue-400">
@@ -56,7 +60,7 @@
                     <span class="flex flex-col items-end text-sm font-light text-gray-800 dark:text-neutral-200">
                         Sort By :
                         @error('sortBy')
-                            <div class="text-sm text-red-500">
+                            <div class="mt-1 text-sm text-red-600 dark:text-red-500">
                                 {{ $message }}
                             </div>
                         @enderror
