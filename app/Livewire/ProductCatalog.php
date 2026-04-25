@@ -35,7 +35,13 @@ class ProductCatalog extends Component
 
     public function mount()
     {
-        $this->validate();
+        try {
+            $this->validate();
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // Jika ada yang ngotak-ngatik URL secara ilegal, langsung reset ke default
+            $this->reset(['search', 'sortBy', 'selectCollections']);
+            $this->resetPage();
+        }
     }
 
     public function applyFilters()

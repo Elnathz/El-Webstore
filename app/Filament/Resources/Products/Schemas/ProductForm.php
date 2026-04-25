@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Products\Schemas;
 
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\RichEditor\FileAttachmentProviders\SpatieMediaLibraryFileAttachmentProvider;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\SpatieTagsInput;
@@ -41,6 +42,7 @@ class ProductForm
                     SpatieTagsInput::make('tags')
                         ->label('Collection')
                         ->type('collection'),
+                    MarkdownEditor::make('description'),
                     TextInput::make('stock')
                         ->numeric()
                         ->default(0),

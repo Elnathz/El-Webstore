@@ -22,11 +22,12 @@ class ProductData extends Data
         public int $stock,
         public float $price,
         public int $weight,
-        public string $coverURL
+        public string $coverURL,
+        public Optional|array $gallery = new Optional()
     ) {
         $this->price_formatted = Number::currency($price);
     }
-    public static function fromModel(Product $product): self
+    public static function fromModel(Product $product, bool $withGallery = false): self
     {
         return new self(
             $product->name,
@@ -37,7 +38,8 @@ class ProductData extends Data
             $product->stock,
             floatval($product->price),
             $product->weight,
-            $product->getFirstMediaUrl('cover')
+            $product->getFirstMediaUrl('cover'),
+            gallery: $withGallery ? $product->getMedia('gallery')->map(fn($record) => $record->getUrl())->toArray() : new Optional()
         );
     }
 }
