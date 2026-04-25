@@ -13,7 +13,7 @@
         @endfor
     </div>
     <div class="flex justify-center w-full mt-5">
-        <a href="{{ $url }}" class="flex items-center text-gray-700">
+        <a href="{{ $url }}" class="flex items-center text-gray-700 dark:text-neutral-300">
             <span class="border-b">
                 Show More Product
             </span>

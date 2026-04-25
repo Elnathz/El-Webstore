@@ -1,6 +1,6 @@
-<div class="container mx-auto max-w-[85rem] w-full px-4 sm:px-6 lg:px-8 py-10">
+<div class="container mx-auto max-w-[85rem] w-full px-4 sm:px-6 lg:px-8 py-10 dark:bg-neutral-900">
     <div class="grid grid-cols-1 gap-10 md:grid-cols-10">
-        <div class="grid grid-cols-1 gap-10 pr-6 border-r border-gray-200 md:col-span-3">
+        <div class="grid grid-cols-1 gap-10 pr-6 border-r border-gray-200 dark:border-neutral-700 md:col-span-3">
             <div>
                 <div class="space-y-3">
                     <input type="text" placeholder="Search"
@@ -24,7 +24,7 @@
                                     {{ $item->name }}
                                 </label>
                             </div>
-                            <span class="text-xs font-light text-gray-800">({{ $item->productCount }})</span>
+                            <span class="text-xs font-light text-gray-800 dark:text-neutral-400">({{ $item->productCount }})</span>
                         </div>
                     @endforeach
                 </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="col-span-1 md:col-span-7">
             <div class="flex items-center justify-between gap-5">
-                <div class="font-light text-gray-800">Results: 100 Items</div>
+                <div class="font-light text-gray-800 dark:text-neutral-200">Results: 100 Items</div>
                 <div class="flex items-center gap-2">
                     <span class="text-sm font-light text-gray-800 dark:text-neutral-200">
                         Sort By :

@@ -15,10 +15,12 @@
     @stack('head')
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen bg-white dark:bg-neutral-900">
     <x-navigation />
     
-    {{ $slot }}
+    <main class="flex-grow">
+        {{ $slot }}
+    </main>
 
     <x-footer />
 </body>

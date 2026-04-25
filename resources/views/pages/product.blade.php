@@ -20,11 +20,11 @@
             <div class="md:col-span-3">
                 <div class="flex flex-col gap-2">
                     <div>
-                        <h1 class="text-3xl font-semibold">Product Name</h1>
-                        <h2 class="text-sm text-gray-800">Ebook, Software Engineer, Web Developer</h2>
-                        <h3 class="text-xs text-gray-500">sku: 123</h2>
+                        <h1 class="text-3xl font-semibold dark:text-white">Product Name</h1>
+                        <h2 class="text-sm text-gray-800 dark:text-neutral-400">Ebook, Software Engineer, Web Developer</h2>
+                        <h3 class="text-xs text-gray-500 dark:text-neutral-500">sku: 123</h3>
                     </div>
-                    <span class="mt-2 text-2xl font-bold">Rp123.123</span>
+                    <span class="mt-2 text-2xl font-bold dark:text-white">Rp123.123</span>
                 </div>
                 <div>
                     <div class="flex items-center gap-2 my-5">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="font-semibold">Description</h3>
+                    <h3 class="font-semibold dark:text-white">Description</h3>
                     <div class="my-2 prose text-gray-800 dark:text-neutral-200">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, aut consequuntur? Sapiente
                             repellat odit eos, ipsam laudantium obcaecati animi provident voluptatum voluptate

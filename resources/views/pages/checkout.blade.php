@@ -51,16 +51,16 @@
                                     class="py-1.5 sm:py-2 px-3 pe-11 block w-full border-gray-200 shadow-2xs sm:text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
                                     placeholder="Cari Lokasi">
 
-                                <ul class="absolute z-10 w-full mt-1 overflow-y-auto bg-white border border-gray-200 rounded-b-lg max-h-60"
+                                <ul class="absolute z-10 w-full mt-1 overflow-y-auto bg-white border border-gray-200 rounded-b-lg max-h-60 dark:bg-neutral-900 dark:border-neutral-700"
                                     x-show="open">
-                                    <li class="p-2 cursor-pointer hover:bg-gray-100">
+                                    <li class="p-2 cursor-pointer hover:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-800">
                                         Cikutra, Kota Bandung
                                     </li>
                                 </ul>
 
-                                <p class="mt-2 text-sm text-gray-600">
+                                <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
                                     Lokasi Dipilih
-                                    <strong>Cikutra, Kota Bandung, 401900</strong>
+                                    <strong class="dark:text-neutral-200">Cikutra, Kota Bandung, 401900</strong>
                                 </p>
                             </div>
                             <p class="mt-2 text-xs text-red-600" id="hs-validation-name-error-helper">
@@ -74,7 +74,7 @@
                 </label>
                 <div class="mt-2 space-y-3">
                     <div class="grid space-y-2">
-                        <div class="text-xs font-bold">
+                        <div class="text-xs font-bold dark:text-neutral-200">
                             Regular
                         </div>
                         @for ($i = 1; $i <= 3; $i++)
@@ -91,7 +91,7 @@
                                         <span class="text-xs text-gray-500">(1-2 Day)</span>
                                     </span>
                                 </div>
-                                <span class="text-sm text-gray-800">
+                                <span class="text-sm text-gray-800 dark:text-neutral-200">
                                     Rp.123.123
                                 </span>
                             </label>
@@ -129,7 +129,7 @@
                 </div>
             </div>
             <div class="p-10">
-                <h1 class="mb-5 text-2xl font-light">Order Summary</h1>
+                <h1 class="mb-5 text-2xl font-light dark:text-white">Order Summary</h1>
                 <div>
                     @for ($i = 1; $i < 5; $i++)
                         <x-single-product-list />

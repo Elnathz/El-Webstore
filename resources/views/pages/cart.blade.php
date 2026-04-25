@@ -2,7 +2,7 @@
     <div class="container mx-auto max-w-[85rem] w-full px-4 sm:px-6 lg:px-8 py-10">
         <div class="grid gap-10 md:grid-cols-10">
             <div class="md:col-span-7">
-                <h1 class="mb-5 text-2xl font-light">Shopping Bag</h1>
+                <h1 class="mb-5 text-2xl font-light dark:text-white">Shopping Bag</h1>
                 <div class="grid gap-5">
                     @for ($i = 0; $i <= 4; $i++)
                         <x-single-product-cart />
@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="md:col-span-3">
-                <h1 class="mb-5 text-2xl font-light">Order Summary</h1>
+                <h1 class="mb-5 text-2xl font-light dark:text-white">Order Summary</h1>
                 <div class="grid gap-5">
                     <!-- List Group -->
                     <ul class="flex flex-col mt-3">
